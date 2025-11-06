@@ -15,7 +15,6 @@
       background-attachment: fixed;
       position: relative;
     }
-
     body::before {
       content: '';
       position: fixed;
@@ -25,11 +24,9 @@
       filter: blur(3px);
       z-index: -3;
     }
-
     .bubbles { position: fixed; inset: 0; overflow: hidden; z-index: -1; }
     .bubble {
-      position: absolute;
-      bottom: -100px;
+      position: absolute; bottom: -100px;
       width: 20px; height: 20px;
       background: rgba(0,255,204,0.3);
       border-radius: 50%;
@@ -44,7 +41,6 @@
     .bubble:nth-child(3){left:50%;animation-duration:13s;}
     .bubble:nth-child(4){left:70%;animation-duration:11s;width:30px;height:30px;}
     .bubble:nth-child(5){left:85%;animation-duration:10s;}
-
     header {
       background: rgba(0, 0, 0, 0.7);
       border-bottom: 2px solid #00ffcc;
@@ -55,7 +51,6 @@
       font-weight: bold;
       text-shadow: 0 0 10px #00ffc3;
     }
-
     section {
       padding: 4rem 10%;
       text-align: center;
@@ -66,10 +61,8 @@
       max-width: 1200px;
       box-shadow: 0 0 20px #00ffcc22;
     }
-
     h2 { color: #00ffc3; text-shadow: 0 0 8px #00ffcc; margin-bottom: 1.5rem; }
     p { font-size: 1rem; line-height: 1.8; color: #eee; max-width: 800px; margin: 0 auto 2rem; }
-
     .image-gallery {
       display: flex; flex-wrap: wrap; justify-content: center;
       gap: 1.5rem; margin-top: 2rem;
@@ -83,60 +76,32 @@
     }
     .image-gallery img:hover { transform: scale(1.05); box-shadow: 0 0 15px #00ffcc99; }
     .image-caption { margin-top: .5rem; font-size: .9rem; color: #00ffc3; text-shadow: 0 0 5px #00ffcc; }
-
-    .flip-card {
-      width: 300px;
-      height: 200px;
-      perspective: 1000px;
-    }
+    .flip-card { width: 300px; height: 200px; perspective: 1000px; }
     .flip-inner {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
+      width: 100%; height: 100%;
+      position: relative; transform-style: preserve-3d;
       transition: transform 0.8s ease;
     }
-    .flip-card:hover .flip-inner {
-      transform: rotateY(180deg);
-    }
+    .flip-card:hover .flip-inner { transform: rotateY(180deg); }
     .flip-front, .flip-back {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
       backface-visibility: hidden;
-      border-radius: 10px;
-      border: 2px solid #00ffc3;
+      border-radius: 10px; border: 2px solid #00ffc3;
       box-shadow: 0 0 10px #00ffcc55;
       overflow: hidden;
     }
-    .flip-front img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-    }
+    .flip-front img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
     .flip-front .image-caption {
-      position: absolute;
-      bottom: 5px;
-      width: 100%;
-      text-align: center;
-      color: #00ffc3;
-      font-size: 0.9rem;
-      text-shadow: 0 0 5px #00ffcc;
+      position: absolute; bottom: 5px; width: 100%;
+      text-align: center; color: #00ffc3; font-size: 0.9rem; text-shadow: 0 0 5px #00ffcc;
     }
     .flip-back {
-      background: rgba(0, 0, 0, 0.85);
-      color: #00ffc3;
+      background: rgba(0, 0, 0, 0.85); color: #00ffc3;
       transform: rotateY(180deg);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-      text-shadow: 0 0 6px #00ffcc;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      padding: 1rem; text-shadow: 0 0 6px #00ffcc;
     }
-
     .team {
       display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
       gap: 2rem; margin-top: 2rem;
@@ -148,7 +113,6 @@
       transition: transform .3s;
     }
     .member:hover { transform: translateY(-8px); box-shadow: 0 0 15px #00ffcc55; }
-
     footer {
       background: rgba(0,0,0,0.9);
       text-align: center; padding: 2rem;
@@ -169,7 +133,7 @@
     <h2>關於《深淵之下》</h2>
     <p>《深淵之下》是一款以核輻射外洩導致海洋生物變異為題材的2D橫向動作探索遊戲。玩家將潛入危機四伏的海底，面對未知的深海異變，揭開軍方與變異生物之間的陰謀。</p>
     <div class="image-gallery">
-      <div class="image-item"><img src="images/橫式海報03.png" alt="深海探險"></div>
+      <div class="image-item"><img src="images/poster_03.png" alt="深海探險"></div>
       <div class="image-item"><img src="images/IMG_1265.png" alt="潛水員行動"></div>
       <div class="image-item"><img src="images/IMG_1267.png" alt="未知生物"></div>
     </div>
@@ -190,7 +154,7 @@
       <div class="flip-card">
         <div class="flip-inner">
           <div class="flip-front">
-            <img src="images/範例_海面下加前景.png" alt="淺海海域">
+            <img src="images/stage_shallow.png" alt="淺海海域">
             <div class="image-caption">淺海海域</div>
           </div>
           <div class="flip-back">
@@ -202,7 +166,7 @@
       <div class="flip-card">
         <div class="flip-inner">
           <div class="flip-front">
-            <img src="images/範例_2層加前景.png" alt="中海海域">
+            <img src="images/stage_mid.png" alt="中海海域">
             <div class="image-caption">中海海域</div>
           </div>
           <div class="flip-back">
@@ -214,7 +178,7 @@
       <div class="flip-card">
         <div class="flip-inner">
           <div class="flip-front">
-            <img src="images/3F瓦片位置_範例.png" alt="深海海域">
+            <img src="images/stage_deep.png" alt="深海海域">
             <div class="image-caption">深海海域</div>
           </div>
           <div class="flip-back">
@@ -229,8 +193,8 @@
   <section id="merch">
     <h2>周邊商品介紹</h2>
     <div class="image-gallery">
-      <div class="image-item"><img src="images/漁夫帽.png" alt="漁夫帽"><div class="image-caption">漁夫帽｜深海光輝款</div></div>
-      <div class="image-item"><img src="images/水壺提袋希.png" alt="水壺提袋"><div class="image-caption">水壺提袋｜澄希＆松莉</div></div>
+      <div class="image-item"><img src="images/hat.png" alt="漁夫帽"><div class="image-caption">漁夫帽｜深海光輝款</div></div>
+      <div class="image-item"><img src="images/bottle_bag.png" alt="水壺提袋"><div class="image-caption">水壺提袋｜澄希＆松莉</div></div>
       <div class="flip-card">
         <div class="flip-inner">
           <div class="flip-front">
